@@ -129,6 +129,14 @@ You can customize the hotkeys for opening the skill page and activating your equ
 
 ---
 
+## 🎮 How to Use Skills In-Game
+
+1. **Open the Skill Page:** Press **`P`** (or your configured hotkey).
+2. **Select a Skill:** Press **`1`, `2`, or `3`** to switch between Holy Aura, Heal, and Holy Wall.
+3. **Activate the Skill:** Press your **Activate Skill** hotkey (default is `R`) while in-game to use the selected skill.
+
+---
+
 ## 🐞 Found a Bug? Here's How to Report It
 
 If something doesn’t seem right — a skill isn’t working, or you suddenly exploded for no reason — please report it so I can take a look!
