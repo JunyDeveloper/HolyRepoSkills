@@ -34,8 +34,8 @@ namespace JP_RepoHolySkills.Skills
         private bool wallUISetup;
 
         // --- Other Constants ---
-        private const float GRENADE_SPAWN_CHANCE = 0.80f;
-        private const float MINE_SPAWN_CHANCE = 0.80f;
+        private const float GRENADE_SPAWN_CHANCE = 0.20f;
+        private const float MINE_SPAWN_CHANCE = 0.20f;
         private const float FORWARD_OFFSET = 2f;
         private const float UP_OFFSET = 1f;
         private const float ADDITIONAL_SPAWN_DISTANCE = 1f;

@@ -68,9 +68,11 @@ public static class ClassModConstants
         "<b>Cooldown:</b> <b><color=#FF5555>90 seconds</color></b>";
 
     public static readonly string HealDescription =
-        "Restores <b><color=#00FF00>10 HP</color></b> to all nearby allies and grants <b><color=#00FF00>5% HP regen/sec</color></b> based on the caster’s max health.\r\n" +
+        "Restores <b><color=#00FF00>10 HP</color></b> to all nearby allies and grants <b><color=#00FF00>2% HP regen/sec</color></b> based on the caster’s max health.\r\n" +
+        "Regen increases by <b><color=#00FF00>+3%</color></b> for each nearby player.\r\n" +
         "<b>Duration:</b> <b><color=#FFD700>3 seconds</color></b>\r\n" +
-        "<b>Cooldown:</b> <b><color=#FF5555>4 minutes</color></b>";
+        "<b>Cooldown:</b> <b><color=#FF5555>3 minutes</color></b>";
+
 
     public static readonly string HolyWallDescription =
         "Summons a <b><color=#00FF00>holy barrier</color></b> that blocks movement.\r\n" +
@@ -90,7 +92,7 @@ public static class ClassModConstants
         "<b><color=#FFFFFF>Base heal increased from <color=#00FF00>10</color> to <color=#00FF00>20</color></color></b>\r\n<size=80%><b><color=#00FFFF>Requires 500,000 total haul extracted</color></b></size>",
         "<b><color=#FFFFFF>Healing radius <color=#00FF00>doubled</color></color></b>\r\n<size=80%><b><color=#00FFFF>Requires 1,000,000 total haul extracted</color></b></size>",
         "<b><color=#FFFFFF>Heal regen increased from <color=#00FF00>2%</color> to <color=#00FF00>4%</color></color></b>\r\n<size=80%><b><color=#00FFFF>Requires 1,500,000 total haul extracted</color></b></size>",
-        "<b><color=#FFFFFF>Regen duration increased from <color=#00FF00>6</color> to <color=#00FF00>12</color> seconds</color></b>\r\n<size=80%><b><color=#00FFFF>Requires 2,000,000 total haul extracted</color></b></size>",
+        "<b><color=#FFFFFF>Regen duration increased from <color=#00FF00>3</color> to <color=#00FF00>6</color> seconds</color></b>\r\n<size=80%><b><color=#00FFFF>Requires 2,000,000 total haul extracted</color></b></size>",
         "<b><color=#FFFFFF><color=#00FF00>Can revive</color> all nearby allies once per game</color></b>\r\n<size=80%><b><color=#00FFFF>Requires 2,500,000 total haul extracted</color></b></size>"
     };
 

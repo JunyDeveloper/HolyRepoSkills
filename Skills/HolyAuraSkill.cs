@@ -19,7 +19,7 @@ namespace JP_RepoHolySkills.Skills
         public float auraExpansionTime = 0.3f;
         public float sprintBoostDuration = 4f;
         public float staminaRegenDuration = 4f;
-        public float staminaRegenPercentage = 0.02f; // Base value; may be overridden by extraction haul.
+        public float staminaRegenPercentage = 0.02f;
         public float auraCooldownDuration = 90f;
         public float baseAuraRange = 6.60f; // Base radius for buff application.
         #endregion
@@ -100,7 +100,7 @@ namespace JP_RepoHolySkills.Skills
                 .GetField("chatActive", BindingFlags.NonPublic | BindingFlags.Instance);
             if (chatActiveField == null)
             {
-                Plugin.Logger.LogWarning("IsChatActive: Unable to find 'chatActive' field on ChatManager.");
+                // Plugin.Logger.LogWarning("IsChatActive: Unable to find 'chatActive' field on ChatManager.");
                 return false;
             }
             return (bool)chatActiveField.GetValue(ChatManager.instance);

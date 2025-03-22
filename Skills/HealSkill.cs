@@ -14,7 +14,7 @@ namespace JP_RepoHolySkills.Skills
     {
         #region Configurable Fields
         // Base heal values.
-        public int baseHealAmount = 10; // Default is 10; may be overridden by extraction haul.
+        public int baseHealAmount = 10;
         public float healRange = 4.5f; // Base heal range.
         public float healthRegenPercentage = 0.02f; // 2% base regen.
         public float regenDuration = 3f; // Base regen duration.
@@ -93,7 +93,7 @@ namespace JP_RepoHolySkills.Skills
                 .GetField("chatActive", BindingFlags.NonPublic | BindingFlags.Instance);
             if (chatActiveField == null)
             {
-                Plugin.Logger.LogWarning("IsChatActive: 'chatActive' field not found in ChatManager.");
+                //  Plugin.Logger.LogWarning("IsChatActive: 'chatActive' field not found in ChatManager.");
                 return false;
             }
             return (bool)chatActiveField.GetValue(ChatManager.instance);
@@ -136,14 +136,14 @@ namespace JP_RepoHolySkills.Skills
             ProcessRevival(effectiveHealRange, allowRevival);
 
             // Calculate healing multiplier.
-            float healingMultiplier = 1f + additionalPlayersCount * 0.05f;
+            float healingMultiplier = 1f + additionalPlayersCount * 0.03f;
             Plugin.Logger.LogInfo($"HealSkill: Healing multiplier is {healingMultiplier} ({additionalPlayersCount} additional players in range).");
 
             // Process healing on targets.
             ProcessHealing(effectiveHealRange, effectiveBaseHeal, healingMultiplier, effectiveRegenPercentage, effectiveRegenDuration);
 
             // Mark revival as used if applicable.
-            if (allowRevival && !Plugin.Instance.isInDebugMode)
+            if (allowRevival)
             {
                 hasRevivedAll = true;
             }
