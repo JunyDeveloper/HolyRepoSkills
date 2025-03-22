@@ -28,7 +28,7 @@ namespace JP_RepoHolySkills
         public GameObject shockwaveGrenadePrefab;
 
         // All skills are available to use & all skill cooldowns are set to 1
-        public bool isInDebugMode = true;
+        public bool isInDebugMode = false;
 
         private void Awake()
         {
