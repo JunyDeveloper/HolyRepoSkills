@@ -1,6 +1,7 @@
 # Holy Repo Skills
 
-Holy Repo Skills is a righteous augmentation for R.E.P.O, granting three sacred abilities to bolster your squad and deliver the Emperor’s light unto the workplace. Glory in cooperation. Triumph through holy fire!
+**Holy Repo Skills** is a righteous augmentation for *R.E.P.O.*, granting three sacred abilities to bolster your squad and deliver the Emperor’s light unto the workplace.  
+Glory in cooperation. Triumph through holy fire!
 
 ---
 
@@ -11,16 +12,17 @@ Holy Repo Skills is a righteous augmentation for R.E.P.O, granting three sacred 
 
 **Description:**  
 Restores **10 HP** to all nearby allies and grants **2% HP regen/sec** based on the caster’s max health.  
-Regen increases by **+3%** for each nearby player.  
-**Duration:** **3 seconds**  
-**Cooldown:** **3 minutes**
+Healing increases by **+3%** for each nearby player.
 
 **Upgrade Tiers:**
-- 🛡️ **Tier 1 (500,000 haul):** Base heal increased from 10 to 20  
-- 🛡️ **Tier 2 (1,000,000 haul):** Healing radius doubled  
-- 🛡️ **Tier 3 (1,500,000 haul):** Heal regen increased from 2% to 4%  
-- 🛡️ **Tier 4 (2,000,000 haul):** Regen duration increased from 3 to 6 seconds  
+- 🛡️ **Tier 1 (500,000 haul):** Base heal increased to 20  
+- 🛡️ **Tier 2 (1,000,000 haul):** Heal range doubled  
+- 🛡️ **Tier 3 (1,500,000 haul):** Heal regen increased to 4%  
+- 🛡️ **Tier 4 (2,000,000 haul):** Regen duration increased to 6 seconds  
 - 🛡️ **Tier 5 (2,500,000 haul):** Can revive all nearby allies once per game  
+
+**Duration:** **3 seconds**  
+**Cooldown:** **3 minutes**
 
 ---
 
@@ -28,16 +30,17 @@ Regen increases by **+3%** for each nearby player.
 > “Speed is holy. Stamina is divine. And cardio builds character.”
 
 **Description:**  
-Grants **+40% movement speed** and **2% stamina regen/sec** based on the caster’s max stamina to all players within range.  
-Regen increases by **+2%** for each nearby player.  
-**Duration:** **4 seconds**  
-**Cooldown:** **90 seconds**
+Radiates a divine aura that grants **+40% movement speed** and **2% stamina regen/sec** based on the caster’s max stamina.  
+Regen increases by **+2%** for each nearby player.
 
 **Upgrade Tiers:**
-- ⚡ **Tier 1 (500,000 haul):** Cast radius doubled  
-- ⚡ **Tier 2 (1,000,000 haul):** Stamina regen increased from 2% to 4%  
-- ⚡ **Tier 3 (1,500,000 haul):** Sprint duration increased from 4 to 8 seconds  
-- ⚡ **Tier 4 (2,000,000 haul):** Regen duration increased from 4 to 8 seconds  
+- ⚡ **Tier 1 (500,000 haul):** Aura range doubled  
+- ⚡ **Tier 2 (1,000,000 haul):** Stamina regen increased to 4%  
+- ⚡ **Tier 3 (1,500,000 haul):** Sprint duration increased to 8 seconds  
+- ⚡ **Tier 4 (2,000,000 haul):** Regen duration increased to 8 seconds  
+
+**Duration:** **4 seconds**  
+**Cooldown:** **90 seconds**
 
 ---
 
@@ -45,32 +48,47 @@ Regen increases by **+2%** for each nearby player.
 > “The Emperor is my shield. But sometimes I also need, like, a real wall.”
 
 **Description:**  
-Summons a **holy barrier** that blocks movement.  
-**Duration:** **3 seconds**  
-**Cooldown:** **90 seconds**
+Summons a shimmering barrier that blocks enemies and projectiles.
 
 **Upgrade Tiers:**
-- 🧱 **Tier 1 (500,000 haul):** Wall size increased by 2x  
-- 🧱 **Tier 2 (1,000,000 haul):** Duration increased from 3 to 6 seconds  
+- 🧱 **Tier 1 (500,000 haul):** Wall size increased 2x  
+- 🧱 **Tier 2 (1,000,000 haul):** Duration increased to 6 seconds  
 - 🧱 **Tier 3 (1,500,000 haul):** 20% chance to spawn a stun grenade  
 - 🧱 **Tier 4 (2,000,000 haul):** 20% chance to spawn a stun mine  
+
+**Duration:** **3 seconds**  
+**Cooldown:** **90 seconds**
 
 ---
 
 ## 📸 Mod Previews
 
-Here are a few sacred glimpses into the Emperor’s grace in action:
+### 🧭 Menu Navigation  
+Press **P** (or your configured hotkey) to open the skill menu.  
+Use **1, 2, 3** to cycle through your available skills.
 
-- 🩸 **Heal Skill** – A radiant burst of energy reviving fallen comrades.
-![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/media/menuDemo_compressed.gif?raw=true)
+![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/menuDemo.gif?raw=true)
 
-- ✨ **Holy Aura** – Golden light emanates from your squad, boosting their speed and stamina.
+---
 
-![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
+### ❤️‍🩹 Heal Skill  
+Unleash a burst of sacred energy to restore health and **revive fallen allies**.
 
-- 🧱 **Holy Wall** – A shimmering barrier halting enemies in their tracks.
-![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/media/menuDemo_compressed.gif?raw=true)
+![Heal Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/reviveDemo.gif?raw=true)
 
+---
+
+### ✨ Holy Aura  
+Radiate divine power that **boosts your team’s speed and stamina** within range.
+
+![Holy Aura Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
+
+---
+
+### 🧱 Holy Wall  
+Conjure a glowing barricade that **halts enemies in their tracks** — a miracle of obstruction.
+
+![Holy Wall Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/ashield.gif?raw=true)
 
 ---
 
@@ -93,6 +111,8 @@ OpenSkillPageHotkey = keyboardshortcut: U
 
 ---
 
-### ☕ Support the Mod
-If you enjoyed the mod you can [buy me a Ko-fi](https://ko-fi.com/junydev)!
+## ☕ Support the Mod
+
+If you enjoyed the mod and want to fuel the faith,  
+you can [buy me a Ko-fi](https://ko-fi.com/junydev)!
 
