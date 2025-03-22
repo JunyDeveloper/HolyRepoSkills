@@ -1,7 +1,6 @@
 # Holy Repo Skills
 
-**Holy Repo Skills** is a righteous augmentation for *R.E.P.O.*, granting three sacred abilities to bolster your squad and deliver the Emperor’s light unto the workplace.  
-Glory in cooperation. Triumph through holy fire!
+**Holy Repo Skills** is a righteous augmentation for *R.E.P.O.*, granting three sacred abilities to bolster your squad and deliver the Emperor’s light unto the workplace. Glory in cooperation. Triumph through holy fire!
 
 ---
 
