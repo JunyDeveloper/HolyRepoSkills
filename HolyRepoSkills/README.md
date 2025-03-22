@@ -4,10 +4,21 @@
 
 ---
 
+**Includes:**
+- 🩸 A cooperative Heal Skill to heal you and your squad
+- ✨ A Holy Aura to buff your squad's speed and stamina
+- 🧱 A Holy Wall to protect and block enemies
+- 💰 Progression system based on total extracted haul
+
+---
+
 ## 🔮 Features
 
-Your skills grow stronger based on your **total extracted haul** — the money you've successfully extracted with during missions.  
-Each time you extract with loot, your haul is **saved and tracked**, allowing you to unlock powerful upgrades over time.
+> 💰 **Your Power Scales with Wealth**  
+> Every time you successfully extract with loot, your total haul increases.  
+> This haul is **saved between missions** and used to unlock permanent skill upgrades!
+
+---
 
 ### 🩸 Heal Skill  
 > “The Emperor’s light mends all wounds. But if not, I brought band-aids.”
@@ -50,7 +61,7 @@ Regen increases by **+2%** for each nearby player.
 > “The Emperor is my shield. But sometimes I also need, like, a real wall.”
 
 **Description:**  
-Summons a shimmering barrier that blocks enemies and projectiles.
+Summons a shimmering barrier that blocks enemies.
 
 **Upgrade Tiers:**
 - 🧱 **Tier 1 (500,000 haul):** Wall size increased 2x  
@@ -73,19 +84,22 @@ Use **1, 2, 3** to cycle through your available skills.
 
 ---
 
-### ❤️‍🩹 Heal Skill  
+### 🩸 Heal Skill Preview  
+Unleash a burst of sacred energy to restore health and **revive fallen allies**.
 
 ![Heal Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/reviveDemo.gif?raw=true)
 
 ---
 
-### ✨ Holy Aura  
+### ✨ Holy Aura Preview  
+Radiate divine power that **boosts your team’s speed and stamina** within range.
 
 ![Holy Aura Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
 
 ---
 
-### 🧱 Holy Wall  
+### 🧱 Holy Wall Preview  
+Conjure a glowing barricade that **halts enemies in their tracks** — a miracle of obstruction.
 
 ![Holy Wall Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/ashield.gif?raw=true)
 
@@ -98,24 +112,24 @@ You can customize the hotkeys for opening the skill page and activating your equ
 > ⚠️ **Important:** Make sure to **launch the game at least once** before editing the config file — this ensures it's generated properly.
 
 ### 🔧 Changing Hotkeys via Thunderstore
-1. Go to the **Thunderstore Mod Manager**.
-2. Select your profile and click **Edit Config** on the left panel.
+1. Open the **Thunderstore Mod Manager**.
+2. Select your profile and click **Edit Config** in the left panel.
 3. Navigate to: `BepInEx/Config/JP_RepoHolySkills.cfg`.
 4. Click **Edit Config**.
-5. Update the following keybinds as desired:
+5. Update the following settings:
    - `OpenSkillSelectionPage`
    - `ActivateSkill`
 
 ### 🧩 Changing Hotkeys Manually
 1. Go to your `BepInEx/config` folder.
 2. Open the file: `JP_RepoHolySkills.cfg`.
-3. Find and edit these settings:
+3. Edit the following lines:
    - `OpenSkillSelectionPage`
    - `ActivateSkill`
+
 ---
 
 ## ☕ Support the Mod
 
-If you enjoyed the mod and want to fuel the faith,  
-you can [buy me a Ko-fi](https://ko-fi.com/junydev)!
-
+If you enjoyed the mod feel free to support me! 
+consider [buying me a Ko-fi](https://ko-fi.com/junydev)!  
