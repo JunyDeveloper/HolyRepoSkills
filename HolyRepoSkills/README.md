@@ -129,6 +129,20 @@ You can customize the hotkeys for opening the skill page and activating your equ
 
 ---
 
+## 🐞 Found a Bug? Here's How to Report It
+
+If something doesn’t seem right — a skill isn’t working, or you suddenly exploded for no reason — please report it so I can take a look!
+
+> ⚠️ Due to limited time, I’m mostly focused on **major bugs** like skills not working or game-breaking crashes.
+
+### 🧭 How to Report a Bug
+
+1. Go to the [HolyRepoSkills GitHub Issues Page](https://github.com/JunyDeveloper/HolyRepoSkills/issues)
+2. Click the green **“New Issue”** button
+3. Add a short, clear title (e.g., `Heal skill doesn’t work after respawn`)
+
+---
+
 ## ☕ Support the Mod
 
 If you enjoyed the mod feel free to support me! 
