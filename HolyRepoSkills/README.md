@@ -62,8 +62,14 @@ Summons a **holy barrier** that blocks movement.
 Here are a few sacred glimpses into the Emperor’s grace in action:
 
 - 🩸 **Heal Skill** – A radiant burst of energy reviving fallen comrades.
+![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/media/menuDemo_compressed.gif?raw=true)
+
 - ✨ **Holy Aura** – Golden light emanates from your squad, boosting their speed and stamina.
+![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/media/menuDemo_compressed.gif?raw=true)
+
 - 🧱 **Holy Wall** – A shimmering barrier halting enemies in their tracks.
+![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/media/menuDemo_compressed.gif?raw=true)
+
 
 ---
 
