@@ -1,0 +1,11 @@
+{
+  "name": "HolyRepoSkills",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/JunyDeveloper/HolyRepoSkills",
+  "description": "Adds skills to Repo",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ],
+  "author": "JunyDeveloper",
+  "license": "MIT"
+}
