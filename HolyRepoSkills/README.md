@@ -6,6 +6,9 @@
 
 ## 🔮 Features
 
+Your skills grow stronger based on your **total extracted haul** — the money you've successfully extracted with during missions.  
+Each time you extract with loot, your haul is **saved and tracked**, allowing you to unlock powerful upgrades over time.
+
 ### 🩸 Heal Skill  
 > “The Emperor’s light mends all wounds. But if not, I brought band-aids.”
 
@@ -71,21 +74,18 @@ Use **1, 2, 3** to cycle through your available skills.
 ---
 
 ### ❤️‍🩹 Heal Skill  
-Unleash a burst of sacred energy to restore health and **revive fallen allies**.
 
 ![Heal Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/reviveDemo.gif?raw=true)
 
 ---
 
 ### ✨ Holy Aura  
-Radiate divine power that **boosts your team’s speed and stamina** within range.
 
 ![Holy Aura Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
 
 ---
 
 ### 🧱 Holy Wall  
-Conjure a glowing barricade that **halts enemies in their tracks** — a miracle of obstruction.
 
 ![Holy Wall Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/ashield.gif?raw=true)
 
@@ -93,21 +93,25 @@ Conjure a glowing barricade that **halts enemies in their tracks** — a miracle
 
 ## 🕹️ Controls & Hotkey Configuration
 
-You can configure hotkeys for opening the skill page and activating your equipped skill via the mod’s config file.
+You can customize the hotkeys for opening the skill page and activating your equipped skill through the mod’s config file.
 
-### 🔧 How to Change Hotkeys
-1. Navigate to your BepInEx `config` folder.
-2. Open `HolyRepoSkills.cfg`.
-3. Edit the following values:
-   - `ActivateSkillHotkey`
-   - `OpenSkillPageHotkey`
+> ⚠️ **Important:** Make sure to **launch the game at least once** before editing the config file — this ensures it's generated properly.
 
-**Examples:**
-```ini
-ActivateSkillHotkey = keyboardshortcut: Y
-OpenSkillPageHotkey = keyboardshortcut: U
-```
+### 🔧 Changing Hotkeys via Thunderstore
+1. Go to the **Thunderstore Mod Manager**.
+2. Select your profile and click **Edit Config** on the left panel.
+3. Navigate to: `BepInEx/Config/JP_RepoHolySkills.cfg`.
+4. Click **Edit Config**.
+5. Update the following keybinds as desired:
+   - `OpenSkillSelectionPage`
+   - `ActivateSkill`
 
+### 🧩 Changing Hotkeys Manually
+1. Go to your `BepInEx/config` folder.
+2. Open the file: `JP_RepoHolySkills.cfg`.
+3. Find and edit these settings:
+   - `OpenSkillSelectionPage`
+   - `ActivateSkill`
 ---
 
 ## ☕ Support the Mod
