@@ -262,7 +262,7 @@ namespace JP_RepoHolySkills.Skills
                 auraSprite.color = lerpedColor;
                 currentAuraCooldown += Time.deltaTime;
 
-                // Plugin.Logger.LogInfo("currentAuraCooldown: " + currentAuraCooldown);
+                /// Plugin.Logger.LogInfo("currentAuraCooldown: " + currentAuraCooldown);
                 yield return null;
             }
 
