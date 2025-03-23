@@ -56,24 +56,24 @@ namespace JP_RepoHolySkills.Patches
             int extractionHaul = (int)extractionHaulField.GetValue(__instance);
             Plugin.Logger.LogInfo("ExtractionPointPatch: extractionHaul value = " + extractionHaul);
 
-            // Save the accumulated extraction haul using ES3.
             ES3Settings es3Settings = new ES3Settings("JPSkillRepo.es3", ES3.Location.File);
             try
             {
-                int prevSavedExtractionHaul = ES3.Load<int>("accumulatedExtractionHaul", es3Settings);
-                Plugin.Logger.LogInfo("ExtractionPointPatch: Loaded previous accumulated extraction haul: " + prevSavedExtractionHaul);
+                // Provide a default of 0 if the file or key doesn’t exist
+                int prevSavedExtractionHaul = ES3.Load<int>("accumulatedExtractionHaul", 0, es3Settings);
+                Plugin.Logger.LogInfo("Loaded previous accumulated extraction haul: " + prevSavedExtractionHaul);
 
                 int newSavedExtractionHaul = checked(prevSavedExtractionHaul + extractionHaul);
-                Plugin.Logger.LogInfo("ExtractionPointPatch: New accumulated extraction haul = " + newSavedExtractionHaul);
+                Plugin.Logger.LogInfo("New accumulated extraction haul = " + newSavedExtractionHaul);
 
                 ES3.Save("accumulatedExtractionHaul", newSavedExtractionHaul, es3Settings);
-                Plugin.Logger.LogInfo("ExtractionPointPatch: Accumulated extraction haul saved successfully.");
+                Plugin.Logger.LogInfo("Accumulated extraction haul saved successfully.");
 
                 JPSkill_GlobalManager.Instance.savedExtractionHaul = newSavedExtractionHaul;
             }
             catch (System.Exception e)
             {
-                Plugin.Logger.LogError("ExtractionPointPatch: Failed to load & save new extraction haul value: " + e.Message);
+                Plugin.Logger.LogError("Failed to load & save new extraction haul value: " + e.Message);
             }
         }
     }
