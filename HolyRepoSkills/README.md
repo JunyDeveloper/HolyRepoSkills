@@ -36,7 +36,7 @@ Conjure a glowing barricade that **halts enemies in their tracks** — a miracle
 
 > 💰 **Your Power Scales with Wealth**  
 > Every time you successfully extract with loot, your total haul increases.  
-> This total haul to unlock permanent skill upgrades!
+> This total haul unlocks permanent skill upgrades!
 
 ---
 
