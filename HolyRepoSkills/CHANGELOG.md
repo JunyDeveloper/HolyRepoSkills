@@ -1,9 +1,13 @@
 # Changelog
 
+## 1.1.4
+- Readme update
+
+## 1.1.3
+- Updates to logs
 
 ## 1.1.2
 - Fix total extraction value not loading
-
 
 ## 1.1.1
 - Fix total extraction not saving which caused total extraction haul to always be zero

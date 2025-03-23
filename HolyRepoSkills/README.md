@@ -4,11 +4,31 @@
 
 ---
 
-**Includes:**
-- 🩸 A cooperative Heal Skill to heal you and your squad
-- ✨ A Holy Aura to buff your squad's speed and stamina
-- 🧱 A Holy Wall to protect and block enemies
-- 💰 Progression system based on total extracted haul
+## 📸 Mod Previews
+
+### 🧭 Menu Navigation  
+Press **P** (or your configured hotkey) to open the skill menu.  
+Use **1, 2, 3** to cycle through your available skills.
+
+![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/menuDemo.gif?raw=true)
+
+
+### 🩸 Heal Skill Preview  
+Unleash a burst of sacred energy to restore health and **revive fallen allies**.
+
+![Heal Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/reviveDemo.gif?raw=true)
+
+
+### ✨ Holy Aura Preview  
+Radiate divine power that **boosts your team’s speed and stamina** within range.
+
+![Holy Aura Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
+
+
+### 🧱 Holy Wall Preview  
+Conjure a glowing barricade that **halts enemies in their tracks** — a miracle of obstruction.
+
+![Holy Wall Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/ashield.gif?raw=true)
 
 ---
 
@@ -16,7 +36,7 @@
 
 > 💰 **Your Power Scales with Wealth**  
 > Every time you successfully extract with loot, your total haul increases.  
-> This haul is **saved between missions** and used to unlock permanent skill upgrades!
+> This total haul to unlock permanent skill upgrades!
 
 ---
 
@@ -25,10 +45,10 @@
 
 **Description:**  
 Restores **10 HP** to all nearby allies and grants **2% HP regen/sec** based on the caster’s max health.  
-Healing increases by **+3%** for each nearby player.
+Direct heal increases by **+3%** for each nearby player.
 
 **Upgrade Tiers:**
-- 🛡️ **Tier 1 (500,000 haul):** Base heal increased to 20  
+- 🛡️ **Tier 1 (500,000 haul):** Base direct heal increased to 20  
 - 🛡️ **Tier 2 (1,000,000 haul):** Heal range doubled  
 - 🛡️ **Tier 3 (1,500,000 haul):** Heal regen increased to 4%  
 - 🛡️ **Tier 4 (2,000,000 haul):** Regen duration increased to 6 seconds  
@@ -49,7 +69,7 @@ Regen increases by **+2%** for each nearby player.
 **Upgrade Tiers:**
 - ⚡ **Tier 1 (500,000 haul):** Aura range doubled  
 - ⚡ **Tier 2 (1,000,000 haul):** Stamina regen increased to 4%  
-- ⚡ **Tier 3 (1,500,000 haul):** Sprint duration increased to 8 seconds  
+- ⚡ **Tier 3 (1,500,000 haul):** Speed boost duration increased to 8 seconds  
 - ⚡ **Tier 4 (2,000,000 haul):** Regen duration increased to 8 seconds  
 
 **Duration:** **4 seconds**  
@@ -64,44 +84,13 @@ Regen increases by **+2%** for each nearby player.
 Summons a shimmering barrier that blocks enemies.
 
 **Upgrade Tiers:**
-- 🧱 **Tier 1 (500,000 haul):** Wall size increased 2x  
+- 🧱 **Tier 1 (500,000 haul):** Wall size is doubled
 - 🧱 **Tier 2 (1,000,000 haul):** Duration increased to 6 seconds  
 - 🧱 **Tier 3 (1,500,000 haul):** 20% chance to spawn a stun grenade  
 - 🧱 **Tier 4 (2,000,000 haul):** 20% chance to spawn a stun mine  
 
 **Duration:** **3 seconds**  
 **Cooldown:** **90 seconds**
-
----
-
-## 📸 Mod Previews
-
-### 🧭 Menu Navigation  
-Press **P** (or your configured hotkey) to open the skill menu.  
-Use **1, 2, 3** to cycle through your available skills.
-
-![Menu Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/menuDemo.gif?raw=true)
-
----
-
-### 🩸 Heal Skill Preview  
-Unleash a burst of sacred energy to restore health and **revive fallen allies**.
-
-![Heal Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/reviveDemo.gif?raw=true)
-
----
-
-### ✨ Holy Aura Preview  
-Radiate divine power that **boosts your team’s speed and stamina** within range.
-
-![Holy Aura Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
-
----
-
-### 🧱 Holy Wall Preview  
-Conjure a glowing barricade that **halts enemies in their tracks** — a miracle of obstruction.
-
-![Holy Wall Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/ashield.gif?raw=true)
 
 ---
 
@@ -147,7 +136,7 @@ If something doesn’t seem right — a skill isn’t working, or you suddenly e
 
 1. Go to the [HolyRepoSkills GitHub Issues Page](https://github.com/JunyDeveloper/HolyRepoSkills/issues)
 2. Click the green **“New Issue”** button
-3. Add a short, clear title (e.g., `Heal skill doesn’t work after respawn`)
+3. Add a title (e.g., `Heal skill doesn’t work after respawn`)
 
 ---
 
