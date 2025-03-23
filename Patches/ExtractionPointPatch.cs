@@ -71,6 +71,10 @@ namespace JP_RepoHolySkills.Patches
 
                 JPSkill_GlobalManager.Instance.savedExtractionHaul = newSavedExtractionHaul;
             }
+            catch (OverflowException oe)
+            {
+                Plugin.Logger.LogWarning("Overflow occurred while saving extraction haul: " + oe.Message);
+            }
             catch (System.Exception e)
             {
                 Plugin.Logger.LogError("Failed to load & save new extraction haul value: " + e.Message);
