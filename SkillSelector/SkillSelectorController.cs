@@ -58,7 +58,7 @@ namespace JP_RepoHolySkills.SkillSelector
             }
 
             // Optionally skip input in a level.
-            if (SemiFunc.RunIsLevel())
+            if (SemiFunc.RunIsLevel() || SemiFunc.RunIsShop())
             {
                 return;
             }
