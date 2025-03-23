@@ -31,7 +31,19 @@ namespace JP_RepoHolySkills.GlobalMananger
             try
             {
                 ES3Settings es3Settings = new ES3Settings("JPSkillRepo.es3", ES3.Location.File);
-                savedExtractionHaul = Plugin.Instance.isInDebugMode ? 3000000 : ES3.Load<int>("accumulatedExtractionHaul", es3Settings);
+
+                // If the file or key doesn't exist, create it with a default value of 0.
+                if (!ES3.FileExists(es3Settings) || !ES3.KeyExists("accumulatedExtractionHaul", es3Settings))
+                {
+                    Plugin.Logger.LogInfo("No saved extraction haul found. Creating file with default value 0.");
+                    ES3.Save("accumulatedExtractionHaul", 0, es3Settings);
+                    savedExtractionHaul = 0;
+                }
+                else
+                {
+                    savedExtractionHaul = Plugin.Instance.isInDebugMode ? 3000000 : ES3.Load<int>("accumulatedExtractionHaul", es3Settings);
+                }
+
                 Plugin.Logger.LogInfo($"JPSkill_GlobalManager Start: Loaded savedExtractionHaul = {savedExtractionHaul}.");
             }
             catch (System.Exception e)
