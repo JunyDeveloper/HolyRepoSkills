@@ -2,6 +2,8 @@
 
 ## 1.1.5
 - Update logger plugin name to mod name
+- Update config for custom war cries
+- Update config to disable war cries
 
 ## 1.1.4
 - Readme update
