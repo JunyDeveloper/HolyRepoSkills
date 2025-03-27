@@ -146,12 +146,12 @@ namespace JP_RepoHolySkills
             // Bind war cry strings.
             holyWarCriesConfig = Config.Bind("WarCries", "HolyWarCries",
                JoinDefaultsWarcries(ClassModConstants.HOLY_WAR_CRIES),
-               "List of holy war cries shouted when casting offensive spells (comma-separated)");
+               "List of war cries shouted when casting holy aura (comma-separated)");
             Logger.LogInfo($"Config: Loaded HolyWarCries = [{holyWarCriesConfig.Value}]");
 
             healWarCriesConfig = Config.Bind("WarCries", "HealWarCries",
                 JoinDefaultsWarcries(ClassModConstants.HEAL_WAR_CRIES),
-                "List of war cries shouted when healing (comma-separated)");
+                "List of war cries shouted when casting healing (comma-separated)");
             Logger.LogInfo($"Config: Loaded HealWarCries = [{healWarCriesConfig.Value}]");
 
             holyWallWarCriesConfig = Config.Bind("WarCries", "HolyWallWarCries",

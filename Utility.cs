@@ -115,7 +115,12 @@ namespace JP_RepoHolySkills
             }
         }
 
-        public static void TriggerWarCry(ConfigEntry<bool> enableWarCries, ConfigEntry<string> warCriesConfig, string context, Color textColor)
+        public static void TriggerWarCry(
+            ConfigEntry<bool> enableWarCries,
+            ConfigEntry<string> warCriesConfig,
+            string context,
+            Color textColor,
+            ChatManager chatManager)
         {
             if (!enableWarCries.Value)
             {
@@ -140,10 +145,9 @@ namespace JP_RepoHolySkills
             string selectedWarCry = warCries[randomIndex];
             Plugin.Logger.LogInfo($"{context}: Selected war cry: {selectedWarCry}");
 
-            // Trigger the chat message.
-            ChatManager.instance.PossessChatScheduleStart(10);
-            ChatManager.instance.PossessChat(ChatManager.PossessChatID.SelfDestruct, selectedWarCry, 1.5f, textColor);
-            ChatManager.instance.PossessChatScheduleEnd();
+            chatManager.PossessChatScheduleStart(10);
+            chatManager.PossessChat(ChatManager.PossessChatID.SelfDestruct, selectedWarCry, 1.5f, textColor);
+            chatManager.PossessChatScheduleEnd();
         }
     }
 }

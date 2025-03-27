@@ -120,7 +120,8 @@ namespace JP_RepoHolySkills.Skills
                     Plugin.Instance.enableWarCriesConfig,
                     Plugin.Instance.healWarCriesConfig,
                     "HealSkill",
-                    new Color(0.5f, 1f, 0.5f, 1f)
+                    new Color(0.5f, 1f, 0.5f, 1f),
+                    ChatManager.instance
                 );
             pv.RPC("PlayHealSkillSFX_RPC", RpcTarget.All, transform.position);
 

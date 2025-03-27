@@ -128,7 +128,8 @@ namespace JP_RepoHolySkills.Skills
                 Plugin.Instance.enableWarCriesConfig,
                 Plugin.Instance.holyWarCriesConfig,
                 "HolyAura",
-                new Color(1f, 0.85f, 0.45f, 1f)
+                new Color(1f, 0.85f, 0.45f, 1f),
+                ChatManager.instance
             );
 
             // Compute a scale multiplier for the spawned aura based on extraction haul.

@@ -180,7 +180,8 @@ namespace JP_RepoHolySkills.Skills
                 Plugin.Instance.enableWarCriesConfig,
                 Plugin.Instance.holyWallWarCriesConfig,
                 "HolyWallSkill",
-                new Color(0.5f, 0.7f, 1f, 1f)
+                new Color(0.5f, 0.7f, 1f, 1f),
+                ChatManager.instance
             );
         }
 
