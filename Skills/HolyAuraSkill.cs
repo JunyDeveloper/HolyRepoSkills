@@ -350,12 +350,6 @@ namespace JP_RepoHolySkills.Skills
         }
 
         [PunRPC]
-        public void TypeWarCry_RPC() // Optional RPC version if needed.
-        {
-            TypeWarCry();
-        }
-
-        [PunRPC]
         public void SpawnAuraBuffParticles_RPC(int avatarViewID)
         {
             PhotonView avatarPV = PhotonView.Find(avatarViewID);
