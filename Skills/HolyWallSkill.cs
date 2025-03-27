@@ -176,13 +176,13 @@ namespace JP_RepoHolySkills.Skills
             TryRequestMineSpawn();
 
             // Trigger a war cry.
-            int randomWarcryIndex = Random.Range(0, ClassModConstants.HOLY_WALL_WAR_CRIES.Length);
-            string warCry = ClassModConstants.HOLY_WALL_WAR_CRIES[randomWarcryIndex];
-            Color holyBlue = new Color(0.5f, 0.7f, 1f, 1f);
-            ChatManager.instance.PossessChatScheduleStart(10);
-            ChatManager.instance.PossessChat(ChatManager.PossessChatID.SelfDestruct, warCry, 1.5f, holyBlue);
-            ChatManager.instance.PossessChatScheduleEnd();
-            Plugin.Logger.LogInfo($"HolyWallSkill: War cry triggered: {warCry}");
+            Utility.TriggerWarCry(
+                Plugin.Instance.enableWarCriesConfig,
+                Plugin.Instance.holyWallWarCriesConfig,
+                "HolyWallSkill",
+                new Color(0.5f, 0.7f, 1f, 1f),
+                ChatManager.instance
+            );
         }
 
         private IEnumerator WallCooldownCount()
@@ -346,15 +346,5 @@ namespace JP_RepoHolySkills.Skills
                 Plugin.Logger.LogWarning("HolyWallSkill: Holy Wall not found for scaling update!");
             }
         }
-
-        /*  private IEnumerator RemoveShieldInSeconds(GameObject spawnedWall, float seconds)
-          {
-              yield return new WaitForSeconds(seconds);
-              if (spawnedWall != null)
-              {
-                  PhotonNetwork.Destroy(spawnedWall);
-                  Plugin.Logger.LogInfo("HolyWallSkill: Holy Wall destroyed after duration.");
-              }
-          }*/
     }
 }

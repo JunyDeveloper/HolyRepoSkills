@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using System.Linq;
+using BepInEx.Configuration;
+using TMPro;
 using UnityEngine;
 
 namespace JP_RepoHolySkills
@@ -111,6 +113,41 @@ namespace JP_RepoHolySkills
             {
                 // Plugin.Logger.LogWarning("GameObject 'SkillTotalHaulText' not found in the scene.");
             }
+        }
+
+        public static void TriggerWarCry(
+            ConfigEntry<bool> enableWarCries,
+            ConfigEntry<string> warCriesConfig,
+            string context,
+            Color textColor,
+            ChatManager chatManager)
+        {
+            if (!enableWarCries.Value)
+            {
+                Plugin.Logger.LogInfo($"{context}: War cries are disabled via config. Skipping trigger.");
+                return;
+            }
+
+            // Parse the user-configured war cries.
+            string[] warCries = warCriesConfig.Value
+                .Split(',')
+                .Select(s => s.Trim())
+                .Where(s => !string.IsNullOrEmpty(s))
+                .ToArray();
+
+            if (warCries.Length == 0)
+            {
+                Plugin.Logger.LogWarning($"{context}: No war cries found in config. Aborting trigger.");
+                return;
+            }
+
+            int randomIndex = Random.Range(0, warCries.Length);
+            string selectedWarCry = warCries[randomIndex];
+            Plugin.Logger.LogInfo($"{context}: Selected war cry: {selectedWarCry}");
+
+            chatManager.PossessChatScheduleStart(10);
+            chatManager.PossessChat(ChatManager.PossessChatID.SelfDestruct, selectedWarCry, 1.5f, textColor);
+            chatManager.PossessChatScheduleEnd();
         }
     }
 }

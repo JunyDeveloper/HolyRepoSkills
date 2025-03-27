@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using JP_RepoHolySkills.GlobalMananger; // (Consider renaming this namespace if "GlobalManager" was intended.)
 using JP_RepoHolySkills.Player;
@@ -115,7 +116,13 @@ namespace JP_RepoHolySkills.Skills
         {
             Plugin.Logger.LogInfo("HealSkill: Activated by local player.");
             isOnCooldown = true;
-            TriggerWarCry();
+            Utility.TriggerWarCry(
+                    Plugin.Instance.enableWarCriesConfig,
+                    Plugin.Instance.healWarCriesConfig,
+                    "HealSkill",
+                    new Color(0.5f, 1f, 0.5f, 1f),
+                    ChatManager.instance
+                );
             pv.RPC("PlayHealSkillSFX_RPC", RpcTarget.All, transform.position);
 
             // Compute effective values.
@@ -305,16 +312,6 @@ namespace JP_RepoHolySkills.Skills
             }
         }
 
-        private void TriggerWarCry()
-        {
-            int randomWarcryIndex = Random.Range(0, ClassModConstants.HEAL_WAR_CRIES.Length);
-            string warCry = ClassModConstants.HEAL_WAR_CRIES[randomWarcryIndex];
-            Plugin.Logger.LogInfo($"HealSkill: Selected warcry: {warCry}");
-            Color healingGreen = new Color(0.5f, 1f, 0.5f, 1f);
-            ChatManager.instance.PossessChatScheduleStart(10);
-            ChatManager.instance.PossessChat(ChatManager.PossessChatID.SelfDestruct, warCry, 1.5f, healingGreen);
-            ChatManager.instance.PossessChatScheduleEnd();
-        }
         #endregion
 
         #region RPC and Effect Methods
