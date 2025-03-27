@@ -20,7 +20,7 @@ Unleash a burst of sacred energy to restore health and **revive fallen allies**.
 
 
 ### ✨ Holy Aura Preview  
-Radiate divine power that **boosts your team’s speed and stamina** within range.
+Radiate divine power that **boosts your team’s speed and stamina**.
 
 ![Holy Aura Demo](https://github.com/JunyDeveloper/HolyRepoSkills/blob/main/HolyRepoSkills/media/HolyAura.gif?raw=true)
 

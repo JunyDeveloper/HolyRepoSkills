@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.5
+- Update logger plugin name to mod name
+
 ## 1.1.4
 - Readme update
 

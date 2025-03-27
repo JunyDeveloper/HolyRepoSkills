@@ -124,7 +124,12 @@ namespace JP_RepoHolySkills.Skills
             isAuraOnCooldown = true;
             pv.RPC("ActivateAuraSFX_RPC", RpcTarget.All, transform.position);
             StartCoroutine(AuraCooldownCount());
-            TypeWarCry();
+            Utility.TriggerWarCry(
+                Plugin.Instance.enableWarCriesConfig,
+                Plugin.Instance.holyWarCriesConfig,
+                "HolyAura",
+                new Color(1f, 0.85f, 0.45f, 1f)
+            );
 
             // Compute a scale multiplier for the spawned aura based on extraction haul.
             float extractionHaul = JPSkill_GlobalManager.Instance.savedExtractionHaul;
@@ -348,17 +353,6 @@ namespace JP_RepoHolySkills.Skills
         public void TypeWarCry_RPC() // Optional RPC version if needed.
         {
             TypeWarCry();
-        }
-
-        public void TypeWarCry()
-        {
-            Color auraGold = new Color(1f, 0.85f, 0.45f, 1f);
-            ChatManager.instance.PossessChatScheduleStart(10);
-            int randomIndex = Random.Range(0, ClassModConstants.HOLY_WAR_CRIES.Length);
-            string warCry = ClassModConstants.HOLY_WAR_CRIES[randomIndex];
-            ChatManager.instance.PossessChat(ChatManager.PossessChatID.SelfDestruct, warCry, 1.5f, auraGold);
-            ChatManager.instance.PossessChatScheduleEnd();
-            Plugin.Logger.LogInfo($"TypeWarCry: War cry '{warCry}' triggered.");
         }
 
         [PunRPC]

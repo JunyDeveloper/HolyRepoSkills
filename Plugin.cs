@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using BepInEx;
 using BepInEx.Configuration;
@@ -23,6 +24,10 @@ namespace JP_RepoHolySkills
 
         public static ConfigEntry<KeyboardShortcut> SkillPageHotkey;
         public static ConfigEntry<KeyboardShortcut> ActivateSkillHotkey;
+        public ConfigEntry<string> holyWarCriesConfig;
+        public ConfigEntry<string> healWarCriesConfig;
+        public ConfigEntry<string> holyWallWarCriesConfig;
+        public ConfigEntry<bool> enableWarCriesConfig;
 
         public GameObject stunGrenadePrefab;
         public GameObject shockwaveGrenadePrefab;
@@ -46,20 +51,7 @@ namespace JP_RepoHolySkills
                 Logger.LogWarning("Plugin: Multiple Plugin instances detected.");
             }
 
-            SkillPageHotkey = Config.Bind(
-                "Keybinds",
-                "OpenSkillSelectionPage",
-                new KeyboardShortcut(KeyCode.P),
-                "The key used to open the skill selection page. Use Unity KeyCode names: https://docs.unity3d.com/ScriptReference/KeyCode.html"
-            );
-
-            ActivateSkillHotkey = Config.Bind(
-                "Keybinds",
-                "ActivateSkill",
-                new KeyboardShortcut(KeyCode.R),
-                "The key used to activate the currently selected skill. Use Unity KeyCode names: https://docs.unity3d.com/ScriptReference/KeyCode.html"
-            );
-
+            SetupUserConfig();
             // NetcodeWeaver();
 
             // Determine the directory where this DLL is located.
@@ -123,10 +115,55 @@ namespace JP_RepoHolySkills
 
             Logger.LogInfo("Plugin: Awake completed.");
         }
-
-        void Start()
+        private void SetupUserConfig()
         {
-            // Optionally add further initialization here.
+            // Bind keybind configurations.
+            SkillPageHotkey = Config.Bind(
+                "Keybinds",
+                "OpenSkillSelectionPage",
+                new KeyboardShortcut(KeyCode.P),
+                "The key used to open the skill selection page. Use Unity KeyCode names: https://docs.unity3d.com/ScriptReference/KeyCode.html"
+            );
+            Logger.LogInfo($"Config: SkillPageHotkey bound to {SkillPageHotkey.Value}");
+
+            ActivateSkillHotkey = Config.Bind(
+                "Keybinds",
+                "ActivateSkill",
+                new KeyboardShortcut(KeyCode.R),
+                "The key used to activate the currently selected skill. Use Unity KeyCode names: https://docs.unity3d.com/ScriptReference/KeyCode.html"
+            );
+            Logger.LogInfo($"Config: ActivateSkillHotkey bound to {ActivateSkillHotkey.Value}");
+
+            // Bind the toggle for enabling/disabling war cries.
+            enableWarCriesConfig = Config.Bind(
+               "WarCries",
+               "EnableWarCries",
+               true,
+               "Set to false to disable war cries entirely."
+           );
+            Logger.LogInfo($"Config: WarCries enabled = {enableWarCriesConfig.Value}");
+
+            // Bind war cry strings.
+            holyWarCriesConfig = Config.Bind("WarCries", "HolyWarCries",
+               JoinDefaultsWarcries(ClassModConstants.HOLY_WAR_CRIES),
+               "List of holy war cries shouted when casting offensive spells (comma-separated)");
+            Logger.LogInfo($"Config: Loaded HolyWarCries = [{holyWarCriesConfig.Value}]");
+
+            healWarCriesConfig = Config.Bind("WarCries", "HealWarCries",
+                JoinDefaultsWarcries(ClassModConstants.HEAL_WAR_CRIES),
+                "List of war cries shouted when healing (comma-separated)");
+            Logger.LogInfo($"Config: Loaded HealWarCries = [{healWarCriesConfig.Value}]");
+
+            holyWallWarCriesConfig = Config.Bind("WarCries", "HolyWallWarCries",
+                JoinDefaultsWarcries(ClassModConstants.HOLY_WALL_WAR_CRIES),
+                "List of war cries shouted when casting holy wall (comma-separated)");
+            Logger.LogInfo($"Config: Loaded HolyWallWarCries = [{holyWallWarCriesConfig.Value}]");
+        }
+
+
+        private static string JoinDefaultsWarcries(string[] array)
+        {
+            return string.Join(",", array);
         }
 
         private static void NetcodeWeaver()
